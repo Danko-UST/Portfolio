@@ -75,7 +75,7 @@ const openModal = (card) => {
   }
 
   if (modalDate) {
-    modalDate.textContent = date ? `Publisert ${date}` : "";
+    modalDate.textContent = date ? `Published ${date}` : "";
   }
 
   if (modalVideo) {
@@ -84,7 +84,7 @@ const openModal = (card) => {
 
   if (modalThumbnail && id) {
     modalThumbnail.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-    modalThumbnail.alt = `Forhåndsvisning av ${title}`;
+    modalThumbnail.alt = `Preview of ${title}`;
   }
 
   modal.classList.add("is-open");
@@ -123,7 +123,7 @@ projectCards.forEach((card) => {
   card.setAttribute("role", "button");
   card.setAttribute("tabindex", "0");
   if (title) {
-    card.setAttribute("aria-label", `${title} – åpne prosjektinfo`);
+    card.setAttribute("aria-label", `${title} – open project details`);
   }
 
   card.addEventListener("click", (event) => {
