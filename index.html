@@ -14,25 +14,29 @@
   </head>
   <body>
     <div class="page">
+      <div class="language-switch" role="group" aria-label="Language" data-label-nb="Språk" hidden>
+        <button type="button" data-language="en" lang="en" aria-label="English" title="English" aria-pressed="true">EN</button>
+        <button type="button" data-language="nb" lang="nb" aria-label="Norsk bokmål" title="Norsk bokmål" aria-pressed="false">NO</button>
+      </div>
       <header class="hero">
         <div class="hero-title" aria-hidden="true">PORTFOLIO</div>
         <div class="container hero-content">
           <aside class="profile-card">
             <!-- Replace the placeholder below with your photo -->
-            <div class="photo-placeholder" role="img" aria-label="Portrait of Danko Ustymenko"></div>
+            <div class="photo-placeholder" role="img" aria-label="Portrait of Danko Ustymenko" data-label-nb="Portrett av Danko Ustymenko"></div>
             <div class="profile-meta">
               <p class="profile-name">Danko Ustymenko</p>
-              <p class="profile-role">IT and Media Production</p>
+              <p class="profile-role" data-nb="IT og medieproduksjon">IT and Media Production</p>
               <p class="profile-school">Hamar katedralskole</p>
             </div>
 
             <div class="profile-contact">
               <p class="contact-item">
-                <span>Email</span>
+                <span data-nb="E-post">Email</span>
                 <a href="mailto:danust16@innlandetfylke.no">danust16@innlandetfylke.no</a>
               </p>
               <p class="contact-item">
-                <span>Phone</span>
+                <span data-nb="Telefon">Phone</span>
                 <a href="tel:+4740610422">+47 406 10 422</a>
               </p>
             </div>
@@ -50,7 +54,7 @@
                   <polygon class="solid" points="11,9 16,12 11,15" />
                 </svg>
               </a>
-              <a class="icon-link" href="mailto:danust16@innlandetfylke.no" aria-label="Email">
+              <a class="icon-link" href="mailto:danust16@innlandetfylke.no" aria-label="Email" data-label-nb="E-post">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="4" y="6" width="16" height="12" rx="2" />
                   <path d="M4 7l8 6 8-6" />
@@ -74,16 +78,16 @@
           </aside>
 
           <div class="hero-copy">
-            <p class="eyebrow">ABOUT ME</p>
+            <p class="eyebrow" data-nb="OM MEG">ABOUT ME</p>
             <h1>Danko Ustymenko</h1>
-            <p>
+            <p data-nb="Jeg er 20 år og går medieproduksjon på videregående skole. Jeg er en strukturert og motivert person som liker å jobbe kreativt og målrettet. Jeg har erfaring med å jobbe selvstendig, ta ansvar og samarbeide med andre. Jeg er punktlig, pålitelig og ønsker å utvikle meg videre innen media og videoproduksjon.">
               I am 20 years old and study Media Production at upper secondary school.
               I am an organised and motivated person who enjoys creative work and
               working towards clear goals. I have experience working independently,
               taking responsibility and collaborating with others. I am punctual,
               reliable and eager to develop my skills in media and video production.
             </p>
-            <p>
+            <p data-nb="Jeg liker å jobbe med visuelle uttrykk og å lære gjennom praktiske oppgaver. Jeg tar ansvar for eget arbeid, følger instrukser nøye og prøver alltid å forbedre resultatet mitt. Gjennom skole og arbeidserfaring har jeg blitt vant til å jobbe både selvstendig og i samarbeid med andre, og jeg møter nye oppgaver med en positiv og lærevillig holdning.">
               I enjoy working with visuals and learning through practical tasks.
               I take responsibility for my work, follow instructions carefully and
               always try to improve my results. Through school and work experience,
@@ -98,7 +102,7 @@
       <section class="info-section">
         <div class="container info-stack">
           <article class="info-row">
-            <h2>SOFTWARE</h2>
+            <h2 data-nb="PROGRAMVARE">SOFTWARE</h2>
             <div class="info-body">
               <ul class="list software-list">
                 <li class="software-item">
@@ -108,7 +112,7 @@
                     alt="DaVinci Resolve logo"
                     loading="lazy"
                   />
-                  <span>DaVinci Resolve – video editing</span>
+                  <span data-nb="DaVinci Resolve – videoredigering">DaVinci Resolve – video editing</span>
                 </li>
                 <li class="software-item">
                   <img
@@ -117,7 +121,7 @@
                     alt="Adobe Photoshop logo"
                     loading="lazy"
                   />
-                  <span>Adobe Photoshop – thumbnails and photo editing</span>
+                  <span data-nb="Adobe Photoshop – miniatyrbilder og fotoredigering">Adobe Photoshop – thumbnails and photo editing</span>
                 </li>
                 <li class="software-item">
                   <img
@@ -126,41 +130,41 @@
                     alt="Adobe Illustrator logo"
                     loading="lazy"
                   />
-                  <span>Adobe Illustrator – graphic design and vector graphics</span>
+                  <span data-nb="Adobe Illustrator – grafisk design og vektorgrafikk">Adobe Illustrator – graphic design and vector graphics</span>
                 </li>
               </ul>
             </div>
           </article>
 
           <article class="info-row">
-            <h2>STRENGTHS</h2>
+            <h2 data-nb="STYRKER">STRENGTHS</h2>
             <div class="info-body">
               <ul class="list">
-                <li>Organised and reliable</li>
-                <li>Strong work ethic and sense of responsibility</li>
-                <li>Quick to learn and adapt to new tasks</li>
-                <li>Good at collaborating with others</li>
-                <li>Focused on quality and detail</li>
+                <li data-nb="Strukturert og pålitelig">Organised and reliable</li>
+                <li data-nb="God arbeidsmoral og ansvarsfølelse">Strong work ethic and sense of responsibility</li>
+                <li data-nb="Lærer raskt og tilpasser meg nye oppgaver">Quick to learn and adapt to new tasks</li>
+                <li data-nb="God til å samarbeide med andre">Good at collaborating with others</li>
+                <li data-nb="Fokusert på kvalitet og detaljer">Focused on quality and detail</li>
               </ul>
             </div>
           </article>
 
           <article class="info-row">
-            <h2>EDUCATION</h2>
+            <h2 data-nb="UTDANNING">EDUCATION</h2>
             <div class="info-body">
               <ul class="list edu-list">
                 <li class="edu-item">
-                  <strong>Upper secondary school – Media Production (VG2)</strong>
+                  <strong data-nb="Videregående skole – Medieproduksjon (VG2)">Upper secondary school – Media Production (VG2)</strong>
                   <span class="edu-meta">Hamar Katedralskole</span>
                   <span class="edu-meta">2026 – 2027</span>
                 </li>
                 <li class="edu-item">
-                  <strong>Norwegian language course</strong>
+                  <strong data-nb="Norskkurs">Norwegian language course</strong>
                   <span class="edu-meta">2024 – 2025</span>
                 </li>
                 <li class="edu-item">
-                  <strong>Completed primary and lower secondary education</strong>
-                  <span class="edu-meta">Ukraine</span>
+                  <strong data-nb="Fullført grunnskole">Completed primary and lower secondary education</strong>
+                  <span class="edu-meta" data-nb="Ukraina">Ukraine</span>
                   <span class="edu-meta">2012 – 2023</span>
                 </li>
               </ul>
@@ -168,25 +172,25 @@
           </article>
 
           <article class="info-row skills-row">
-            <h2>SKILLS</h2>
+            <h2 data-nb="FERDIGHETER">SKILLS</h2>
             <div class="info-body">
               <ul class="list">
-                <li>Video editing with a focus on pacing, structure and flow</li>
-                <li>Basic motion graphics and text animation</li>
-                <li>Thumbnail design and image editing</li>
-                <li>Visual storytelling</li>
-                <li>Independent work and collaboration on projects</li>
-                <li>Problem-solving and responsibility in the workplace</li>
+                <li data-nb="Videoredigering med fokus på tempo, struktur og flyt">Video editing with a focus on pacing, structure and flow</li>
+                <li data-nb="Enkel animert grafikk og tekstanimasjon">Basic motion graphics and text animation</li>
+                <li data-nb="Design av miniatyrbilder og bildebehandling">Thumbnail design and image editing</li>
+                <li data-nb="Visuell historiefortelling">Visual storytelling</li>
+                <li data-nb="Selvstendig arbeid og samarbeid i prosjekter">Independent work and collaboration on projects</li>
+                <li data-nb="Problemløsing og ansvar i arbeidssituasjoner">Problem-solving and responsibility in the workplace</li>
               </ul>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="paper-band" aria-label="My Work">
+      <section class="paper-band" aria-label="My Work" data-label-nb="Mitt arbeid">
         <img class="paper-edge top" src="Foto/Torn_paper_edge.svg" alt="" />
         <div class="paper-center">
-          <h2>MY WORK</h2>
+          <h2 data-nb="MITT ARBEID">MY WORK</h2>
         </div>
         <img class="paper-edge bottom" src="Foto/Torn_paper_edge.svg" alt="" />
       </section>
@@ -194,17 +198,20 @@
       <section class="work-section">
         <div class="container">
           <div class="work-header">
-            <h2>PROJECTS</h2>
-            <p>Four selected projects showcasing editing, rhythm and visual expression.</p>
+            <h2 data-nb="PROSJEKTER">PROJECTS</h2>
+            <p data-nb="Fire utvalgte prosjekter med klipp, rytme og visuelt uttrykk.">Four selected projects showcasing editing, rhythm and visual expression.</p>
           </div>
           <div class="work-grid">
             <article
               class="project-card"
               data-modal-title="Motion graphic-reklame for Tech Festival"
               data-role="Motion Graphics Designer &amp; Video Editor"
+              data-role-nb="Designer av animert grafikk og videoredigerer"
               data-description="This project was created entirely by me. No sound design or audio work was involved, as the video was designed to be silent."
+              data-description-nb="Dette prosjektet er laget helt av meg. Ingen lyddesign eller lydarbeid var involvert, siden videoen var laget for å være uten lyd."
               data-tags="Motion Graphics|Video Editing|DaVinci Resolve"
-              data-date="16 December 2025"
+              data-tags-nb="Animert grafikk|Videoredigering|DaVinci Resolve"
+              data-date="2025-12-16"
             >
               <h3>Motion graphic-reklame for Tech Festival</h3>
               <div
@@ -217,12 +224,12 @@
                   type="button"
                   aria-label="Play Motion graphic-reklame for Tech Festival"
                 >
-                  <span class="video-frame__label">Watch video</span>
+                  <span class="video-frame__label" data-nb="Se video">Watch video</span>
                 </button>
               </div>
               <div class="tags">
-                <span class="tag">Motion</span>
-                <span class="tag">Editing</span>
+                <span class="tag" data-nb="Animasjon">Motion</span>
+                <span class="tag" data-nb="Redigering">Editing</span>
               </div>
             </article>
 
@@ -230,9 +237,12 @@
               class="project-card"
               data-modal-title="Wheatus - Teenage Dirtbag | Cover Music Video"
               data-role="Lead Actor, Lead Video Editor."
+              data-role-nb="Hovedskuespiller, hovedansvarlig for videoredigering."
               data-description="Our cover music video of “Teenage Dirtbag” by Wheatus. This is a school/music video project created as a cover version of the original song. We do not own the original song or the rights to the music. Original song: Teenage Dirtbag Original artist: Wheatus Cover Music Video: VLAD Media Made as a creative student project."
+              data-description-nb="Vår covermusikkvideo av «Teenage Dirtbag» av Wheatus. Dette er et skole- og musikkvideoprosjekt laget som en coverversjon av den originale sangen. Vi eier verken den originale sangen eller rettighetene til musikken. Original sang: Teenage Dirtbag. Original artist: Wheatus. Covermusikkvideo: VLAD Media. Laget som et kreativt elevprosjekt."
               data-tags="Acting|Video Editing"
-              data-date="9 June 2026"
+              data-tags-nb="Skuespill|Videoredigering"
+              data-date="2026-06-09"
             >
               <h3>Wheatus - Teenage Dirtbag | Cover Music Video</h3>
               <div
@@ -245,12 +255,12 @@
                   type="button"
                   aria-label="Play Wheatus - Teenage Dirtbag | Cover Music Video"
                 >
-                  <span class="video-frame__label">Watch video</span>
+                  <span class="video-frame__label" data-nb="Se video">Watch video</span>
                 </button>
               </div>
               <div class="tags">
-                <span class="tag">Music Video</span>
-                <span class="tag">Editing</span>
+                <span class="tag" data-nb="Musikkvideo">Music Video</span>
+                <span class="tag" data-nb="Redigering">Editing</span>
               </div>
             </article>
 
@@ -258,9 +268,12 @@
               class="project-card"
               data-modal-title="Minecraft-tutorial – Ender Dragon-gjennomgang"
               data-role="Scriptwriter, in-game director, editor, and visual storyteller for the Minecraft tutorial."
+              data-role-nb="Manusforfatter, regissør i spillet, klipper og visuell historieforteller for Minecraft-veiledningen."
               data-description="I created a complete Minecraft tutorial, guiding viewers step by step from starting survival mode to defeating the Ender Dragon. I handled multiple aspects of the project, including scripting, filming, and editing. The video includes strategic tips, visual cues, and engaging commentary to help players navigate the Nether, locate strongholds, and fight mobs safely."
+              data-description-nb="Jeg laget en komplett Minecraft-veiledning som guider seerne steg for steg fra å starte i overlevelsesmodus til å beseire Ender Dragon. Jeg håndterte flere deler av prosjektet, inkludert manus, filming og klipping. Videoen inneholder strategiske tips, visuelle hint og engasjerende kommentarer som hjelper spillere med å navigere i Nether, finne strongholds og bekjempe mobs på en trygg måte."
               data-tags="DaVinci Resolve|Video Editing|Film Dubbing|YouTube Thumbnail|Scriptwriting"
-              data-date="18 November 2025"
+              data-tags-nb="DaVinci Resolve|Videoredigering|Filmdubbing|YouTube-miniatyrbilde|Manusskriving"
+              data-date="2025-11-18"
             >
               <h3>Minecraft-tutorial – Ender Dragon-gjennomgang</h3>
               <div
@@ -273,12 +286,12 @@
                   type="button"
                   aria-label="Play Minecraft-tutorial – Ender Dragon-gjennomgang"
                 >
-                  <span class="video-frame__label">Watch video</span>
+                  <span class="video-frame__label" data-nb="Se video">Watch video</span>
                 </button>
               </div>
               <div class="tags">
                 <span class="tag">YouTube</span>
-                <span class="tag">Editing</span>
+                <span class="tag" data-nb="Redigering">Editing</span>
               </div>
             </article>
 
@@ -286,9 +299,12 @@
               class="project-card"
               data-modal-title="Planet Reboot – sirkulær økonomi for en bærekraftig fremtid"
               data-role="Video Editor and Motion Graphics Designer"
+              data-role-nb="Videoredigerer og designer av animert grafikk"
               data-description="This video introduces concepts of the circular economy and the idea behind Planet Reboot. I focused on clear pacing, clean cuts and supporting graphics to make the message easy to follow and engaging for a school audience."
+              data-description-nb="Denne videoen introduserer begreper innen sirkulær økonomi og ideen bak Planet Reboot. Jeg fokuserte på tydelig tempo, rene klipp og støttende grafikk for å gjøre budskapet lett å følge og engasjerende for et skolepublikum."
               data-tags="Video Editing|Motion Graphics|Graphic Design|Storytelling"
-              data-date="21 January 2026"
+              data-tags-nb="Videoredigering|Animert grafikk|Grafisk design|Historiefortelling"
+              data-date="2026-01-21"
             >
               <h3>Planet Reboot – sirkulær økonomi for en bærekraftig fremtid</h3>
               <div
@@ -301,12 +317,12 @@
                   type="button"
                   aria-label="Play Planet Reboot – sirkulær økonomi for en bærekraftig fremtid"
                 >
-                  <span class="video-frame__label">Watch video</span>
+                  <span class="video-frame__label" data-nb="Se video">Watch video</span>
                 </button>
               </div>
               <div class="tags">
-                <span class="tag">School</span>
-                <span class="tag">Editing</span>
+                <span class="tag" data-nb="Skole">School</span>
+                <span class="tag" data-nb="Redigering">Editing</span>
               </div>
             </article>
           </div>
@@ -317,12 +333,12 @@
         <img class="paper-edge top" src="Foto/Torn_paper_edge.svg" alt="" />
         <div class="container contact-card contact-inner">
           <div>
-            <h2>CONTACT</h2>
-            <p>Get in touch for collaborations, school projects or internships.</p>
+            <h2 data-nb="KONTAKT">CONTACT</h2>
+            <p data-nb="Ta kontakt for samarbeid, skoleprosjekter eller praksis.">Get in touch for collaborations, school projects or internships.</p>
           </div>
           <div class="contact-duplicate">
             <p class="contact-item">
-              <span>Email</span>
+              <span data-nb="E-post">Email</span>
               <span class="contact-inline">
                 <a href="mailto:danust16@innlandetfylke.no">danust16@innlandetfylke.no</a>
                 <a
@@ -341,7 +357,7 @@
               </span>
             </p>
             <p class="contact-item">
-              <span>Phone</span>
+              <span data-nb="Telefon">Phone</span>
               <a href="tel:+4740610422">+47 406 10 422</a>
             </p>
           </div>
@@ -356,24 +372,24 @@
           aria-modal="true"
           aria-labelledby="project-modal-title"
         >
-          <button class="project-modal__close" type="button" data-modal-close aria-label="Close">
+          <button class="project-modal__close" type="button" data-modal-close aria-label="Close" data-label-nb="Lukk">
             ×
           </button>
           <div class="project-modal__grid">
             <div class="project-modal__text">
               <h3 id="project-modal-title"></h3>
-              <p class="modal-label">My role.</p>
+              <p class="modal-label" data-nb="Min rolle.">My role.</p>
               <p class="modal-text" data-modal-role></p>
-              <p class="modal-label">Project description.</p>
+              <p class="modal-label" data-nb="Prosjektbeskrivelse.">Project description.</p>
               <p class="modal-text" data-modal-description></p>
-              <p class="modal-label">Skills and deliverables</p>
+              <p class="modal-label" data-nb="Ferdigheter og leveranser">Skills and deliverables</p>
               <div class="modal-tags" data-modal-tags></div>
               <p class="modal-date" data-modal-date></p>
             </div>
             <div class="project-modal__media">
               <a class="modal-video" href="#" target="_blank" rel="noopener" data-modal-video>
                 <img data-modal-thumbnail alt="" loading="lazy" />
-                <span class="modal-video__cta">Watch on YouTube</span>
+                <span class="modal-video__cta" data-nb="Se på YouTube">Watch on YouTube</span>
               </a>
             </div>
           </div>

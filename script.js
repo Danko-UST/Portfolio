@@ -9,6 +9,49 @@ const modalDate = modal?.querySelector("[data-modal-date]");
 const modalVideo = modal?.querySelector("[data-modal-video]");
 const modalThumbnail = modal?.querySelector("[data-modal-thumbnail]");
 const modalCloseTargets = modal?.querySelectorAll("[data-modal-close]") ?? [];
+const languageSwitch = document.querySelector(".language-switch");
+const languageButtons = document.querySelectorAll("[data-language]");
+const translatedText = Array.from(document.querySelectorAll("[data-nb]"), (element) => ({
+  element,
+  english: element.textContent,
+  norwegian: element.dataset.nb,
+}));
+const translatedLabels = Array.from(document.querySelectorAll("[data-label-nb]"), (element) => ({
+  element,
+  english: element.getAttribute("aria-label"),
+  norwegian: element.dataset.labelNb,
+}));
+const languageText = {
+  en: {
+    published: "Published",
+    preview: "Preview of",
+    play: "Play",
+    projectDetails: "open project details",
+  },
+  nb: {
+    published: "Publisert",
+    preview: "Forhåndsvisning av",
+    play: "Spill av",
+    projectDetails: "åpne prosjektinfo",
+  },
+};
+const languageStorageKey = "portfolio-language";
+let currentLanguage = "en";
+let activeProject = null;
+
+const getProjectText = (card, field) => {
+  const english = card.dataset[field] || "";
+  return currentLanguage === "nb" ? card.dataset[`${field}Nb`] || english : english;
+};
+
+const formatProjectDate = (date) => {
+  return new Intl.DateTimeFormat(currentLanguage === "nb" ? "nb-NO" : "en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${date}T00:00:00Z`));
+};
 
 const getYouTubeId = (url) => {
   try {
@@ -42,9 +85,10 @@ const openModal = (card) => {
   }
 
   const title = card.dataset.modalTitle || card.querySelector("h3")?.textContent || "";
-  const role = card.dataset.role || "";
-  const description = card.dataset.description || "";
-  const tags = (card.dataset.tags || "")
+  activeProject = card;
+  const role = getProjectText(card, "role");
+  const description = getProjectText(card, "description");
+  const tags = getProjectText(card, "tags")
     .split("|")
     .map((item) => item.trim())
     .filter(Boolean);
@@ -75,7 +119,7 @@ const openModal = (card) => {
   }
 
   if (modalDate) {
-    modalDate.textContent = date ? `Published ${date}` : "";
+    modalDate.textContent = date ? `${languageText[currentLanguage].published} ${formatProjectDate(date)}` : "";
   }
 
   if (modalVideo) {
@@ -84,7 +128,7 @@ const openModal = (card) => {
 
   if (modalThumbnail && id) {
     modalThumbnail.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-    modalThumbnail.alt = `Preview of ${title}`;
+    modalThumbnail.alt = `${languageText[currentLanguage].preview} ${title}`;
   }
 
   modal.classList.add("is-open");
@@ -99,6 +143,40 @@ const closeModal = () => {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
+  activeProject = null;
+};
+
+const setLanguage = (language) => {
+  currentLanguage = language === "nb" ? "nb" : "en";
+  document.documentElement.lang = currentLanguage;
+
+  translatedText.forEach(({ element, english, norwegian }) => {
+    element.textContent = currentLanguage === "nb" ? norwegian : english;
+  });
+
+  translatedLabels.forEach(({ element, english, norwegian }) => {
+    element.setAttribute("aria-label", currentLanguage === "nb" ? norwegian : english);
+  });
+
+  languageButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.language === currentLanguage));
+  });
+
+  projectCards.forEach((card) => {
+    const title = card.querySelector("h3")?.textContent?.trim();
+    if (title) {
+      card.setAttribute("aria-label", `${title} – ${languageText[currentLanguage].projectDetails}`);
+    }
+  });
+
+  videoFrames.forEach((frame) => {
+    const title = frame.dataset.title || "";
+    frame.querySelector(".video-frame__button")?.setAttribute("aria-label", `${languageText[currentLanguage].play} ${title}`);
+  });
+
+  if (activeProject) {
+    openModal(activeProject);
+  }
 };
 
 videoFrames.forEach((frame) => {
@@ -119,12 +197,8 @@ videoFrames.forEach((frame) => {
 });
 
 projectCards.forEach((card) => {
-  const title = card.querySelector("h3")?.textContent?.trim();
   card.setAttribute("role", "button");
   card.setAttribute("tabindex", "0");
-  if (title) {
-    card.setAttribute("aria-label", `${title} – open project details`);
-  }
 
   card.addEventListener("click", (event) => {
     if (event.target.closest(".video-frame__button")) {
@@ -154,4 +228,22 @@ if (modal) {
       closeModal();
     }
   });
+}
+
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.language);
+    try {
+      localStorage.setItem(languageStorageKey, currentLanguage);
+    } catch {}
+  });
+});
+
+let savedLanguage = "en";
+try {
+  savedLanguage = localStorage.getItem(languageStorageKey) || "en";
+} catch {}
+setLanguage(savedLanguage);
+if (languageSwitch) {
+  languageSwitch.hidden = false;
 }
