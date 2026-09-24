@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="620" viewBox="0 0 720 620">
+  <g fill="none" stroke="#b8947a" stroke-linecap="round" stroke-width=".7" opacity=".48">
+    <path d="M31 29q4 9 1 17m156 14q7-6 18-4m171-40q-6 9-2 16m243 35 9-3M90 135q13 2 20-4m142 28q-2-9 5-18m174-42q11 8 18 4m199 34q-8 1-12 10M20 235l12 3m139-28q8 6 8 15m170-3q10-3 18 2m153-42q-6 14-1 23m156 31-10 4M73 349q3-12 13-13m160-46 13 5m117 47q-8 6-6 17m172-36q9 8 16 6m131 37 7-12M35 461q15-5 22 1m153-59q5 7 2 15m136 35q11 2 17-6m140 21 5 12m145-55q-1 13 6 18M116 556q11 3 17 0m143 12-3-11m149 30q-6-10-3-17m132-26q8-8 19-4m-574 43 11 2m660 2q6-4 12-3"/>
+  </g>
+  <g fill="#c8a68c" opacity=".4">
+    <circle cx="66" cy="80" r=".6"/><circle cx="289" cy="65" r=".8"/><circle cx="545" cy="98" r=".6"/><circle cx="126" cy="272" r=".7"/><circle cx="405" cy="177" r=".5"/><circle cx="601" cy="274" r=".7"/><circle cx="296" cy="387" r=".6"/><circle cx="134" cy="477" r=".7"/><circle cx="588" cy="460" r=".6"/><circle cx="230" cy="610" r=".6"/>
+  </g>
+</svg>
